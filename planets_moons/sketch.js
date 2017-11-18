@@ -7,13 +7,12 @@ function preload() {
 
 function setup() {
 	padding = windowWidth / 13 - 3;
-	createCanvas(windowWidth, 1200);
-	background(20);
+	createCanvas(windowWidth, 1300);
 }
 
 function draw() {
+	background(20);
 	translate(70, 400);
-	noLoop();
 	for (let [i, p] of planets.planets.entries()) {
 		drawPlanet(p, i);
 		drawLabel(p, i);
@@ -22,6 +21,19 @@ function draw() {
 	textFont("Rajdhani", 36);
 	textAlign(CENTER);
 	text("The planets & moons of the Solar System", windowWidth / 2 - 70, -280);
+
+	pos = Math.max(Math.round(mouseX / (windowWidth / 13 - 3)) - 1, 0);
+	textSize(10);
+	noStroke();
+	for (let [j, m] of planets.planets[pos].moons.entries()) {
+		if (j % 2) {
+			textAlign(LEFT);
+			text(m, pos * padding + 10, 70 + j * 8);
+		} else {
+			textAlign(RIGHT);
+			text(m, pos * padding - 10, 70 + j * 8);
+		}
+	}
 }
 
 function drawLabel(p, i) {
