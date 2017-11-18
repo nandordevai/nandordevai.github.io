@@ -12,14 +12,14 @@
         },
         {
             "name": "Earth",
-            "diameter": 12756,
+            "diameter": 12742,
             "moons": [
                 "Moon"
             ]
         },
         {
             "name": "Mars",
-            "diameter": 6794,
+            "diameter": 6779,
             "moons": [
                 "Deimos",
                 "Phobos"
@@ -32,7 +32,7 @@
         },
         {
             "name": "Jupiter",
-            "diameter": 142980,
+            "diameter": 139822,
             "moons": [
                 "Metis",
                 "Adrastea",
@@ -101,7 +101,7 @@
         },
         {
             "name": "Saturn",
-            "diameter": 1120540,
+            "diameter": 116464,
             "moons": [
                 "Tarqeq",
                 "Pan",
@@ -168,7 +168,7 @@
         },
         {
             "name": "Uranus",
-            "diameter": 51120,
+            "diameter": 50724,
             "moons": [
                 "Cordelia",
                 "Ophelia",
@@ -201,7 +201,7 @@
         },
         {
             "name": "Neptune",
-            "diameter": 49530,
+            "diameter": 49244,
             "moons": [
                 "Naiad",
                 "Thalassa",
@@ -220,7 +220,7 @@
         },
         {
             "name": "Pluto",
-            "diameter": 2300,
+            "diameter": 2374,
             "moons": [
                 "Charon",
                 "Styx",

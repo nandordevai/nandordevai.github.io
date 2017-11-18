@@ -1,49 +1,42 @@
-var planets;
 let padding = 0;
 const WHITE = 240;
 
 function preload() {
-	p_data = loadJSON("planets.json");
+	planets = loadJSON("planets.json");
 }
 
 function setup() {
 	padding = windowWidth / 13 - 3;
-	createCanvas(windowWidth, 1480);
+	createCanvas(windowWidth, 1200);
 	background(20);
 }
 
 function draw() {
-	translate(70, 800);
+	translate(70, 400);
 	noLoop();
-	for (let [i, p] of p_data.planets.entries()) {
-		p.position = i;
-	}
-	let planets = p_data.planets;
-	planets.sort((a, b) => a.diameter < b.diameter ? 1 : (a. diameter > b.diameter ? -1 : 0));
-	textFont("Rajdhani", 12);
-
-	for (p of planets) {
-		drawPlanet(p);
-		drawLabel(p);
+	for (let [i, p] of planets.planets.entries()) {
+		drawPlanet(p, i);
+		drawLabel(p, i);
 	}
 	fill(WHITE);
 	textFont("Rajdhani", 36);
 	textAlign(CENTER);
-	text("The planets & moons\nof the Solar System", windowWidth / 2 - 70, -380);
+	text("The planets & moons of the Solar System", windowWidth / 2 - 70, -280);
 }
 
-function drawLabel(p) {
+function drawLabel(p, i) {
+	textFont("Rajdhani", 12);
 	textAlign(CENTER);
 	fill(WHITE);
-	text(p.name, (p.position) * padding, 40);
+	text(p.name, i * padding, 40);
 }
 
-function drawPlanet(p) {
-	let i = p.position;
-	fill(100 + 50 * (i % 3));
+function drawPlanet(p, i) {
+	fill(150 + 40 * (i % 3));
 	noStroke();
-	let r = Math.max(Math.round(p.diameter / 12756 * 8), 2);
+	let r = Math.max(Math.round(p.diameter / 12742) * 20, 2);
 	ellipse(i * padding, 10 - r / 2, r, r);
+
 	for (let [j, m] of p.moons.entries()) {
 		stroke(WHITE);
 		if (j % 10 === 0 && j > 0) {
