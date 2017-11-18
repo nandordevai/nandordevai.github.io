@@ -22,16 +22,18 @@ function draw() {
 	textAlign(CENTER);
 	text("The planets & moons of the Solar System", windowWidth / 2 - 70, -280);
 
-	pos = Math.max(Math.round(mouseX / (windowWidth / 13 - 3)) - 1, 0);
-	textSize(10);
-	noStroke();
-	for (let [j, m] of planets.planets[pos].moons.entries()) {
-		if (j % 2) {
-			textAlign(LEFT);
-			text(m, pos * padding + 10, 68 + j * 8);
-		} else {
-			textAlign(RIGHT);
-			text(m, pos * padding - 10, 68 + j * 8);
+	if (mouseY > 300) {
+		pos = Math.max(Math.round(mouseX / (windowWidth / 13 - 3)) - 1, 0);
+		textSize(10);
+		noStroke();
+		for (let [j, m] of planets.planets[pos].moons.entries()) {
+			if (j % 2) {
+				textAlign(LEFT);
+				text(m, pos * padding + 10, 68 + j * 8);
+			} else {
+				textAlign(RIGHT);
+				text(m, pos * padding - 10, 68 + j * 8);
+			}
 		}
 	}
 }
