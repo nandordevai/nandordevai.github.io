@@ -28,10 +28,10 @@ function draw() {
 	for (let [j, m] of planets.planets[pos].moons.entries()) {
 		if (j % 2) {
 			textAlign(LEFT);
-			text(m, pos * padding + 10, 70 + j * 8);
+			text(m, pos * padding + 10, 68 + j * 8);
 		} else {
 			textAlign(RIGHT);
-			text(m, pos * padding - 10, 70 + j * 8);
+			text(m, pos * padding - 10, 68 + j * 8);
 		}
 	}
 }
