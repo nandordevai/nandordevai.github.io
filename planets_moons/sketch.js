@@ -1,5 +1,5 @@
 var planets;
-const padding = 95;
+let padding = 0;
 const WHITE = 240;
 
 function preload() {
@@ -7,7 +7,8 @@ function preload() {
 }
 
 function setup() {
-	createCanvas(windowWidth, windowHeight * 2);
+	padding = windowWidth / 13 - 3;
+	createCanvas(windowWidth, 1480);
 	background(20);
 }
 
@@ -39,7 +40,7 @@ function drawLabel(p) {
 
 function drawPlanet(p) {
 	let i = p.position;
-	fill(100 + 50 * (i % 2));
+	fill(100 + 50 * (i % 3));
 	noStroke();
 	let r = Math.max(Math.round(p.diameter / 12756 * 8), 2);
 	ellipse(i * padding, 10 - r / 2, r, r);
