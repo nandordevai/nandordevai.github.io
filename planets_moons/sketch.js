@@ -53,7 +53,7 @@ function drawPlanet(p, i) {
 
 	for (let [j, m] of p.moons.entries()) {
 		stroke(WHITE);
-		if (j % 10 === 0 && j > 0) {
+		if ((j + 1) % 10 === 0 && j > 0) {
 			ellipse(i * padding + 0.5, j * 8 + 65.5, 2, 2);
 		} else {
 			point(i * padding, j * 8 + 65);
