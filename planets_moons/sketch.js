@@ -1,5 +1,6 @@
 let padding = 0;
 const WHITE = 240;
+let planets = {};
 
 function preload() {
 	planets = loadJSON("planets.json");
