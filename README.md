@@ -1,5 +1,1 @@
-# nandordevai.github.io
-
-TODO:
-- [ ] webpack eslint
-- [ ] HMR
+https://jekyllrb.com/docs/github-pages/
