@@ -1,10 +1,8 @@
 ---
 layout: post
 title: "Connecting Sonic Pi, Ableton Live and hardware synths"
-date: 2018-06-13 22:29:00 +0200
 categories: [live coding, audio]
 tags: [Ableton Live, Sonic Pi, live coding]
-published: false
 ---
 
 Recently I became interested in live coding, but I don’t want to change my entire workflow. I like using Ableton Live, software synths and my only hardware synth, the Bass Station II so I wanted to combine everything into ~~a giant mess~~ something manageable. [Sonic Pi](https://sonic-pi.net) looks like a good candidate to test the concept and its MIDI and audio output can easily be routed to either Live or the BSII’s USB MIDI input.
