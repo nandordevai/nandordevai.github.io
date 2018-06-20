@@ -11,7 +11,7 @@ Recently I became interested in live coding, but I don’t want to change my ent
 
 At the end I want a loop playing programmed beats on a Live Drum Rack, another one sending MIDI note data and CC messages to a soft synth (in my case Hybrid 3) in Live, yet another one also sending notes and CCs to the Bass Station II – which in turn sends its output into my audio interface and it gets routed to an audio track in Live – and finally a loop sending output to a second audio track. Here’s a diagram to make it clear:
 
-![](/assets/images/Sonic Pi – Ableton Live.001.png)
+![](/images/Sonic Pi – Ableton Live.001.png)
 
 ## MIDI loops to Drum Rack
 
@@ -44,7 +44,7 @@ end
 
 Set up a track in Live with the Drum Rack and set its input to the virtual MIDI device:
 
-![](/assets/images/Sonic Pi – Ableton Live.002.png)
+![](/images/Sonic Pi – Ableton Live.002.png)
 
 Now if we run the code in Sonic Pi then we can hear the drum loop from Ableton Live.
 
