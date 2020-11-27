@@ -13,7 +13,7 @@ I haven't really got into the audio part yet, mostly playing with patterns, usin
 
 You can install it by simply copying the LCXLKontrol.sc file to your SuperCollider extension dir. Documentation is included in the README.md file. A quick example of mapping a global variable to a fader with one simple line of code:
 
-```sclang
+```supercollider
 ~lc = LCXLKontrol();
 ~octave = 5;
 ~lc.fader1.mapTo("octave", 4, 7);
